@@ -10,6 +10,10 @@ import React from 'react';
 import {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import * as Authentication from 'demo-authentication'
+import {store} from './src/store'
+import {Provider, connect} from 'react-redux'
+import { loadingResource } from './src/actions/loadingResource';
+import ResourceLoader from './src/ containers/ResourceLoader';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -19,17 +23,20 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App1 extends Component<Props> {
+export default class App extends Component<Props> {
+
   render() {
     return (
+      <Provider store={store}>
+
       <View style={styles.container}>
       <Authentication.App onLoginSuccess={(profile) => {
         alert("login success")
       }}/>
-        <Text style={styles.welcome}> fdfafWelcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <ResourceLoader></ResourceLoader>
       </View>
+      </Provider>
+
     );
   }
 }

@@ -10,7 +10,12 @@
   "dependencies": {
     "demo-authentication": "0.0.9",
     "react": "16.8.3",
-    "react-native": "0.59.4"
+    "react-native": "0.59.4",
+    "@types/react-redux": "^7.0.6",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "react-redux": "^7.0.2",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
