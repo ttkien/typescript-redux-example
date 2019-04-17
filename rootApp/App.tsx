@@ -9,7 +9,7 @@
 import React from 'react';
 import {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import * as Authentication from 'Authentication'
+import * as Authentication from 'demo-authentication'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -23,7 +23,9 @@ export default class App1 extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-      <Authentication.App/>
+      <Authentication.App onLoginSuccess={(profile) => {
+        alert("login success")
+      }}/>
         <Text style={styles.welcome}> fdfafWelcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>

@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "postinstall": "rm -rf node_modules/demo-authentication/node_modules",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
   "dependencies": {
-    "Authentication": "../Authentication",
+    "demo-authentication": "0.0.9",
     "react": "16.8.3",
     "react-native": "0.59.4"
   },
