@@ -4,7 +4,7 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import {Provider} from 'react-redux'
 import {store} from './store'
 import HomeComponent from './containers/home';
-import {IProfile} from './types'
+import {IProfile, ActionType} from './types'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -14,7 +14,8 @@ const instructions = Platform.select({
 });
 
 export interface Props {
-  onLoginSuccess: (profile: IProfile | null) => void;
+  onLoginSuccess: (profile?: IProfile) => void
+  style?: any
 
 }
 export class App extends Component<Props> {
@@ -23,12 +24,14 @@ export class App extends Component<Props> {
   }
 
   render() {
-    const onLoginSuccess = this.props.onLoginSuccess
+    const {style, onLoginSuccess} = this.props;
     return (
       <Provider store={store}>
-      <HomeComponent onLoginSuccess={(profile) => {
+      <HomeComponent 
+        style={style}
+        onLoginSuccess={(profile) => {
           console.log("LOgin success"  + profile)
-          this.props.onLoginSuccess(profile)
+          onLoginSuccess(profile)
       }}/>
       </Provider>
     );

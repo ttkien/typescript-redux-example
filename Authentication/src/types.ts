@@ -19,9 +19,9 @@ export enum StateType {
 
 export type Action = {
     type: ActionType,
-    username: string,
-    password: string,
-    profile: IProfile
+    username?: string,
+    password?: string,
+    profile?: IProfile
 }
 
 

@@ -800,9 +800,9 @@
     "@types/yargs" "^12.0.9"
 
 "@react-native-community/cli@^1.2.1":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/cli/-/cli-1.9.0.tgz#75cddefe83b3c85fc57a58a4135cdc60aaeb1387"
-  integrity sha512-QW1dER3VlE/ovuYLF5QPiAk2xNm1jCv/Yhp/fbcfdjKF+sYBJRYFrTzhx7JCPZX19GAxeYG+O9K8KadFt8J3Jw==
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@react-native-community/cli/-/cli-1.9.1.tgz#47e261a4a8bdfdcbd9a971b90e56257bee5af1ac"
+  integrity sha512-OPZi/DP3WWBXgZzu+JmhCnGPvmuz/eEgCzXpaumOEnBRXENrKzHvVzi9oG3m2YSgIra0WEQeLBeogw1R/te0vQ==
   dependencies:
     chalk "^1.1.1"
     commander "^2.19.0"
@@ -1830,9 +1830,9 @@ cssstyle@^1.0.0:
     cssom "0.3.x"
 
 csstype@^2.2.0:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.3.tgz#b701e5968245bf9b08d54ac83d00b624e622a9fa"
-  integrity sha512-rINUZXOkcBmoHWEyu7JdHu5JMzkGRoMX4ov9830WNgxf5UYxcBUO0QTKAqeJ5EZfSdlrcJYkC8WwfVW7JYi4yg==
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.4.tgz#d585a6062096e324e7187f80e04f92bd0f00e37f"
+  integrity sha512-lAJUJP3M6HxFXbqtGRc0iZrdyeN+WzOWeY0q/VnFzI+kqVrYIzC7bWlKqCW7oCIdzoPkvfp82EVvrTlQ8zsWQg==
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -1930,10 +1930,8 @@ delegates@^1.0.0:
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
   integrity sha1-hMbhWbgZBP3KWaDvRM2HDTElD5o=
 
-demo-authentication@0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/demo-authentication/-/demo-authentication-0.0.9.tgz#308e27f1677755f46ef4d495dc3aa13fdbccb75b"
-  integrity sha512-Wquarx3wUH2Fjnk9jVFt7MW9lvb2SbFbp+LpypmfUE8NqbcR7xZkuZJ1iwRRF8EwQMYoTxhxKYZ0Mvrd7V5d6g==
+demo-authentication@../Authentication:
+  version "0.0.12"
   dependencies:
     "@types/react-redux" "^7.0.6"
     "@types/redux" "^3.6.0"
@@ -3075,9 +3073,9 @@ isstream@~0.1.2:
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
 istanbul-api@^2.1.1:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/istanbul-api/-/istanbul-api-2.1.4.tgz#5c7fe1d1c9b96ba3184ac4bbff7fc04eaccbdd8b"
-  integrity sha512-aAFQL0HA2BLUl18XmTQ7H7CGKI58DtZFvvfmg6e+rA3iNFergvpi16czLV4CpI7HOImMeZ5mqI62dvSNVtUQVA==
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/istanbul-api/-/istanbul-api-2.1.5.tgz#697b95ec69856c278aacafc0f86ee7392338d5b5"
+  integrity sha512-meYk1BwDp59Pfse1TvPrkKYgVqAufbdBLEVoqvu/hLLKSaQ054ZTksbNepyc223tMnWdm6AdK2URIJJRqdP87g==
   dependencies:
     async "^2.6.1"
     compare-versions "^3.2.1"
@@ -3087,7 +3085,7 @@ istanbul-api@^2.1.1:
     istanbul-lib-instrument "^3.2.0"
     istanbul-lib-report "^2.0.7"
     istanbul-lib-source-maps "^3.0.5"
-    istanbul-reports "^2.2.2"
+    istanbul-reports "^2.2.3"
     js-yaml "^3.13.0"
     make-dir "^2.1.0"
     minimatch "^3.0.4"
@@ -3138,10 +3136,10 @@ istanbul-lib-source-maps@^3.0.1, istanbul-lib-source-maps@^3.0.5:
     rimraf "^2.6.2"
     source-map "^0.6.1"
 
-istanbul-reports@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-2.2.2.tgz#b84303c46fc0541c3c3b69abae687c42a6907d44"
-  integrity sha512-ZFuTdBQ3PSaPnm02aEA4R6mzQ2AF9w03CYiXADzWbbE48v/EFOWF4MaX4FT0NRdqIk48I7o0RPi+S8TMswaCbQ==
+istanbul-reports@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-2.2.3.tgz#14e0d00ecbfa9387757999cf36599b88e9f2176e"
+  integrity sha512-T6EbPuc8Cb620LWAYyZ4D8SSn06dY9i1+IgUX2lTH8gbwflMc9Obd33zHTyNX653ybjpamAHS9toKS3E6cGhTw==
   dependencies:
     handlebars "^4.1.0"
 

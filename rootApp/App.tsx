@@ -30,8 +30,10 @@ export default class App extends Component<Props> {
       <Provider store={store}>
 
       <View style={styles.container}>
-      <Authentication.App onLoginSuccess={(profile) => {
-        alert("login success")
+      <Authentication.App 
+      style={styles.authentication}
+      onLoginSuccess={(profile: any) => {
+        alert("login success" + profile)
       }}/>
       <ResourceLoader></ResourceLoader>
       </View>
@@ -43,10 +45,11 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    alignSelf: 'stretch',
+    width:320
   },
   welcome: {
     fontSize: 20,
@@ -58,4 +61,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  authentication: {
+    alignSelf: 'stretch'
+  }
 });

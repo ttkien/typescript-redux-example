@@ -1,18 +1,19 @@
-import { ActionType } from "../types";
+import { ActionType, Action } from "../types";
+import { Dispatch } from "redux";
 
-export const loginAction = (username: string, password: string) => dispatch => {
-        dispatch({
+export const loginAction = (username: string, password: string) => (dispatch: Dispatch<Action>) => {
+        dispatch({           
             type: ActionType.Login,
             username: username,
             password: password,
-        })
+    })
 
         dispatch({
             type: ActionType.Loading
         })
         
         setTimeout(() => dispatch({
-            type: "LOGIN_SUCCESS",
+            type: ActionType.Success,
             profile: {
                 "name": "Mr Siro"
             }
