@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react'
 import { View, Text, TextInput, StyleSheet, Button } from 'react-native'
-import { loginAction } from '../actions/login'
+import { loginAction } from '../../actions/login'
 import { connect } from 'react-redux'
-import { IProfile, ActionType, Action } from '../types'
+import { IProfile, ActionType, Action } from '../../types'
 import { Dispatch } from 'redux';
-import ProfileComponent from './home/profile.component'
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import ProfileComponent from './profile.component'
 
 interface Props {
     type?: ActionType

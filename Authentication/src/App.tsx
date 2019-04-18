@@ -28,12 +28,6 @@ export class App extends Component<Props> {
     return (
       <Provider store={store}>
       <StackNavigation/>
-      {/* <HomeComponent 
-        style={style}
-        onLoginSuccess={(profile) => {
-          console.log("LOgin success"  + profile)
-          onLoginSuccess(profile)
-      }}/> */}
       </Provider>
     );
   }
