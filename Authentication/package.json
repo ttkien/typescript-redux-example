@@ -1,6 +1,6 @@
 {
   "name": "demo-authentication",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
@@ -9,15 +9,14 @@
     "@types/react-redux": "^7.0.6",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
+    "npm": "^6.9.0",
     "react": "16.8.3",
     "react-native": "0.59.4",
+    "react-native-gesture-handler": "^1.1.0",
+    "react-navigation": "^3.8.1",
     "react-redux": "^7.0.2",
     "redux-thunk": "^2.3.0"
   },
-  "files": [
-    "src/",
-    "dist/"
-  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {

@@ -5,7 +5,7 @@ import {Provider} from 'react-redux'
 import {store} from './store'
 import HomeComponent from './containers/home';
 import {IProfile, ActionType} from './types'
-
+import StackNavigation from './stackNavigation'
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -27,12 +27,13 @@ export class App extends Component<Props> {
     const {style, onLoginSuccess} = this.props;
     return (
       <Provider store={store}>
-      <HomeComponent 
+      <StackNavigation/>
+      {/* <HomeComponent 
         style={style}
         onLoginSuccess={(profile) => {
           console.log("LOgin success"  + profile)
           onLoginSuccess(profile)
-      }}/>
+      }}/> */}
       </Provider>
     );
   }

@@ -14,6 +14,7 @@ import {store} from './src/store'
 import {Provider, connect} from 'react-redux'
 import { loadingResource } from './src/actions/loadingResource';
 import ResourceLoader from './src/ containers/ResourceLoader';
+import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -22,6 +23,16 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+const AppNavigator = createBottomTabNavigator(
+   {
+    resourceLoader: ResourceLoader,
+    authentication: Authentication.App
+  }
+);
+
+const AppContainer = createAppContainer(AppNavigator);
+
+
 type Props = {};
 export default class App extends Component<Props> {
 
@@ -29,14 +40,16 @@ export default class App extends Component<Props> {
     return (
       <Provider store={store}>
 
-      <View style={styles.container}>
+<AppContainer/>
+      {/* <View style={styles.container}>
       <Authentication.App 
       style={styles.authentication}
       onLoginSuccess={(profile: any) => {
         alert("login success" + profile)
       }}/>
-      <ResourceLoader></ResourceLoader>
-      </View>
+      <ResourceLoader></ResourceLoader> */
+      // </View>
+    }
       </Provider>
 
     );

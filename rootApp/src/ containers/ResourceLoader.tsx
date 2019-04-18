@@ -43,6 +43,8 @@ render() {
             </View>)
         case ActionType.Success:
 
+              // setTimeout(
+                // ,2000)
             return (
                 <View style={{ top: 50 }}>
                     <Text>{"Resource name " + this.props.resource}</Text>

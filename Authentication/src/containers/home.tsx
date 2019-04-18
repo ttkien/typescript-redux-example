@@ -4,6 +4,8 @@ import { loginAction } from '../actions/login'
 import { connect } from 'react-redux'
 import { IProfile, ActionType, Action } from '../types'
 import { Dispatch } from 'redux';
+import ProfileComponent from './home/profile.component'
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 interface Props {
     type?: ActionType
@@ -14,36 +16,11 @@ interface Props {
 }
 
 
-interface ProfileProps {
-    profile?: IProfile
-}
-
-class ProfileComponent extends PureComponent<ProfileProps> {
-    constructor(props: ProfileProps) {
-        super(props)
-    }
-
-    render() {
-        const { profile } = this.props;
-
-        if (profile != null) {
-            return (
-                <Text>
-                    {
-                        profile.name
-                    }
-                </Text>
-            )
-        } else {
-            return (
-                <View></View>
-            );
-        }
-
-    }
-}
-
 export class HomeComponent extends PureComponent<Props> {
+    static navigationOptions = {
+        title: 'Home!',
+      };
+
     constructor(props: Props) {
         super(props)
     }
@@ -62,7 +39,10 @@ export class HomeComponent extends PureComponent<Props> {
 
     renderContent() {
         const { onLoginSuccess } = this.props;
-        switch (this.props.type) {
+        const { navigate } = this.props.navigation;
+        const type = this.props.type == null ? ActionType.Login :  this.props.type;
+
+        switch (type) {
             case ActionType.Login:
                 return (<View style={{ top: 50 }}>
                     <Text>login</Text>
@@ -76,7 +56,7 @@ export class HomeComponent extends PureComponent<Props> {
                     </View>
                     <View style={styles.row}>
                         <Button title="Login" onPress={()=> {
-                            
+                             navigate('Welcome')
                         }}></Button>
                     </View>
                 </View>)
